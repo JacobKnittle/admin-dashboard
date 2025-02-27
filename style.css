@@ -69,6 +69,8 @@ h6 {
 
 * {
   font-family: "Roboto", sans-serif;
+  padding: 0;
+  list-style: none;
 }
 
 .page-wrapper {
@@ -81,7 +83,44 @@ h6 {
   display: grid;
   grid-column: 1 / 2;
   grid-row: 1 / 4;
+  grid-template-rows: 100px 300px 200px;
+  gap: 70px;
   background-color: #5a8ccf;
+  color: white;
+}
+
+.sidebar-section .dashboard {
+  display: grid;
+  grid-template-columns: 50px 40px;
+  gap: 20px;
+  font-size: 30px;
+  font-weight: 600;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.sidebar-section img {
+  filter: invert(1);
+}
+
+.upper-dashboard-links,
+.lower-dashboard-links {
+  padding-left: 30px;
+}
+
+.upper-dashboard-links li,
+.lower-dashboard-links li {
+  margin-bottom: 20px;
+}
+
+.upper-dashboard-links span,
+.lower-dashboard-links span {
+  display: grid;
+  grid-template-columns: 20px 20px;
+  align-items: center;
+  gap: 40px;
+  font-size: 24px;
+  font-weight: bold;
 }
 
 .navbar-section {
@@ -96,4 +135,23 @@ h6 {
   grid-column: 2 / 4;
   grid-row: 2 / 4;
   background-color: #e4e7ef;
+}
+
+.navbar-section {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  grid-template-rows: 1fr 1fr;
+  padding: 30px 50px 10px 50px;
+}
+
+.top-half-nav {
+  display: grid;
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+}
+
+.bottom-half-nav {
+  display: grid;
+  grid-column: 1 / 3;
+  grid-row: 2/3;
 }
