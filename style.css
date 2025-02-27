@@ -1,0 +1,99 @@
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+.page-wrapper {
+  display: grid;
+  grid-template-columns: 500px 1360px 400px;
+  grid-template-rows: 220px 420px 420px;
+}
+
+.sidebar-section {
+  display: grid;
+  grid-column: 1 / 2;
+  grid-row: 1 / 4;
+  background-color: #5a8ccf;
+}
+
+.navbar-section {
+  display: grid;
+  grid-column: 2 / 4;
+  grid-row: 1 / 2;
+  background-color: white;
+}
+
+.main-content-section {
+  display: grid;
+  grid-column: 2 / 4;
+  grid-row: 2 / 4;
+  background-color: #e4e7ef;
+}
