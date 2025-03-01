@@ -71,5 +71,172 @@ h6 {
   font-family: "Roboto", sans-serif;
   padding: 0;
   list-style: none;
+  text-decoration: none;
 }
 
+.page-wrapper {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 2fr 4fr 2fr;
+  grid-template-areas:
+    "sidebar navbar navbar"
+    "sidebar main-content right-side-content"
+    "sidebar main-content right-side-content";
+}
+
+.left-sidebar-section {
+  grid-area: sidebar;
+  display: grid;
+  grid-template-rows: 2fr 7fr 8fr;
+  align-items: start;
+  background-color: #5a8ccf;
+  color: white;
+  padding: 30px 0 0 30px;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: 50px 200px;
+  font-size: 40px;
+  align-items: center;
+  gap: 20px;
+}
+
+.dashboard img {
+  max-height: 50px;
+  filter: invert(1);
+}
+
+.sidebar-upper-links {
+  display: grid;
+  gap: 20px;
+}
+
+.sidebar-link img {
+  max-height: 40px;
+  filter: invert(1);
+}
+
+.sidebar-link a {
+  display: grid;
+  grid-template-columns: 50px 90px;
+  font-size: 20px;
+  font-weight: bold;
+  align-items: center;
+  gap: 20px;
+  color: white;
+}
+
+.sidebar-lower-links {
+  display: grid;
+  gap: 30px;
+}
+
+.navbar-section {
+  display: grid;
+  grid-area: navbar;
+  grid-template-areas:
+    "searchbar searchbar searchbar . profile-icons"
+    "greeting . . profile-links profile-links";
+  grid-template-columns: 3fr 1fr 1fr 1fr 2fr;
+  grid-template-rows: 1fr 1fr;
+  background-color: white;
+  padding: 20px 100px 10px 100px;
+}
+
+.search-container {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  align-items: center;
+  gap: 10px;
+  grid-area: searchbar;
+}
+
+.search-container input {
+  height: 50px;
+  background-color: #e4e7ef;
+  border: none;
+  border-radius: 16px;
+}
+
+.profile-icons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 3fr;
+  align-items: center;
+
+  grid-area: profile-icons;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.profile-icons img {
+  max-height: 50px;
+}
+
+.greeting {
+  display: grid;
+  grid-area: greeting;
+  grid-template-columns: 100px 1fr;
+  align-items: center;
+  gap: 20px;
+}
+
+.greeting img {
+  max-height: 100px;
+}
+
+.greeting-text {
+  font-size: 30px;
+}
+
+.greeting-text span {
+  font-size: 16px;
+}
+
+.profile-links {
+  display: grid;
+  grid-area: profile-links;
+  align-items: center;
+  justify-items: end;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.profile-links a {
+  color: white;
+  background-color: #5a8ccf;
+  padding: 10px 40px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.main-content-section {
+  background-color: #e4e7ef;
+  grid-area: main-content;
+}
+
+.your-projects {
+  margin-left: 120px;
+  margin-top: 50px;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-items: center;
+  row-gap: 30px;
+}
+
+.project {
+  width: 450px;
+  height: 200px;
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.right-side-content {
+  background-color: red;
+  grid-area: right-side-content;
+}
