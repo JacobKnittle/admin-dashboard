@@ -81,8 +81,8 @@ h6 {
   grid-template-rows: 2fr 4fr 2fr;
   grid-template-areas:
     "sidebar navbar navbar"
-    "sidebar main-content right-side-content"
-    "sidebar main-content right-side-content";
+    "sidebar main-content main-content"
+    "sidebar main-content main-content";
 }
 
 .left-sidebar-section {
@@ -211,32 +211,58 @@ h6 {
 }
 
 .main-content-section {
+  display: grid;
   background-color: #e4e7ef;
   grid-area: main-content;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 1fr 2fr 2fr 2fr 2fr;
+  grid-template-areas:
+    "main-headers main-headers main-headers"
+    "projects projects announcements"
+    "projects projects announcements"
+    "projects projects trending"
+    "projects projects trending";
 }
 
-.your-projects {
-  margin-left: 120px;
-  margin-top: 50px;
-}
-
-.projects-container {
+.main-content-headers {
   display: grid;
+  grid-area: main-headers;
+  grid-template-columns: 3fr 1fr;
+  align-items: end;
+  margin-left: 100px;
+}
+
+.projects {
+  display: grid;
+  grid-area: projects;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  justify-items: center;
-  row-gap: 30px;
+  gap: 50px;
+  margin-left: 100px;
 }
 
 .project {
-  width: 450px;
-  height: 200px;
+  display: grid;
   background-color: white;
-  border-radius: 20px;
-  padding: 20px;
+  grid-template-areas:
+    "text ."
+    ". icons";
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  padding: 40px;
 }
 
-.right-side-content {
-  background-color: red;
-  grid-area: right-side-content;
+.project-text {
+  grid-area: text;
+}
+
+.project-icons {
+  display: grid;
+  align-items: end;
+  grid-template-columns: 40px 40px 40px;
+  grid-area: icons;
+}
+
+.project-icons img {
+  max-height: 30px;
 }
